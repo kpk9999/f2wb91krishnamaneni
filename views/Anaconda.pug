@@ -1,0 +1,17 @@
+extends layout
+block content
+    div(class="container-fluid")
+        h1= title
+    - let results=[{Anaconda_color:"Black",Anaconda_petname:"Dharani",Anaconda_price:200000},{Anaconda_color:"Brown",Anaconda_petname:"Divya",Anaconda_price:300000},{Anaconda_color:"White",Anaconda_petname:"Narri",Anaconda_price:400080}]
+          div(class="row")
+            each form,index in results
+                div(class = "col-sm-2 bg-secondary" onclick=`buy(${index})`) #{form.Anaconda_color}              
+                div(class = "col-sm-2 bg-secondary" onclick=`buy(${index})`) #{form.Anaconda_petname}                
+                div(class = "col-sm-2 bg-secondary" onclick=`buy(${index})`) #{form.Anaconda_price}
+                hr
+    script.
+        function buy(itemNo)
+        {
+            alert(`You purchased Item ${itemNo+1}`)
+        }
+       
