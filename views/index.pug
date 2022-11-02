@@ -1,7 +1,8 @@
 extends layout
+
 block content
   h1= title
-  p KPK #{title}
+  p KPK 
 button(type="button" class="btn btn-primary" onclick="doBump()") Press Me
 div(id="bump") Bump the Count
 script.
@@ -10,6 +11,6 @@ script.
     function doBump(){
     count=count+bump;
     bump=bump+1;
-   document.getElementById('bump').innerHTML=`Count ${count} with Bump ${bump}`        
+   document.getElementById('bump').innerHTML=`Count ${count} with Bump ${bump}`
   }
 
