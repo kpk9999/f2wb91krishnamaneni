@@ -1,8 +1,7 @@
 extends layout
-
 block content
   h1= title
-  p KPK
+  p KPK #{title}
 button(type="button" class="btn btn-primary" onclick="doBump()") Press Me
 div(id="bump") Bump the Count
 script.
